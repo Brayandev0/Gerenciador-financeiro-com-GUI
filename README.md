@@ -2,8 +2,8 @@
 Gerenciador de Finanças
 Este projeto é um Gerenciador de Finanças desenvolvido com PySide6 e SQLite. Ele permite aos usuários registrar transações financeiras, calcular lucros e gastos, e visualizar um resumo das transações.
 
-Requisitos 
-Python 3.x,
+Tecnologias usadas : 
+Python 3.12.3,
 PySide6,
 SQLite,
 
