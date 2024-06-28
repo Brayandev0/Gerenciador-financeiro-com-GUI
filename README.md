@@ -1,8 +1,8 @@
-# Gerenciador-financeiro-com-GUI
+## Gerenciador-financeiro-com-GUI
 Gerenciador de Finanças
 Este projeto é um Gerenciador de Finanças desenvolvido com PySide6 e SQLite. Ele permite aos usuários registrar transações financeiras, calcular lucros e gastos, e visualizar um resumo das transações.
 
-Tecnologias usadas : 
+## Tecnologias usadas
 Python 3.12.3,
 PySide6,
 SQLite,
@@ -10,13 +10,14 @@ SQLite,
 ![Captura de tela_2024-06-23_17-26-27](https://github.com/Brayandev0/Gerenciador-financeiro-com-GUI/assets/84828739/0dd1d04f-3713-4222-8066-d00c622c489b)
 ![Captura de tela_2024-06-23_17-32-33](https://github.com/Brayandev0/Gerenciador-financeiro-com-GUI/assets/84828739/3966ada7-3893-4b4a-86e2-5ee177fea92f)
 
-Funcionalidades :
 
-  Conexão com Banco de Dados
+ ## Conexão com Banco de Dados
   
 A aplicação utiliza SQLite para armazenar os dados das transações.
 Duas tabelas são criadas se não existirem: Transacoes e tabela_do_valor.
 Registrar Transações
+
+## Funcionalidades 
 
 Lucro: Insira a descrição e o valor da receita e clique em "Calcular Lucro" para adicionar a transação de receita.
 
@@ -30,7 +31,7 @@ self.valor_input: Campo para entrada do valor da transação.
 self.descricao_input: Campo para entrada da descrição da transação.
 self.total: Campo de leitura que exibe o total das transações.
 
-Erros e Validação
+## Erros e Validação
 Logs de Erros: Uma caixa de mensagem de erro é exibida quando valores inválidos são inseridos ou quando campos obrigatórios estão vazios.
 
 Quando o Usuario clica em adicionar e não há valores nos campos este erro e retornado :
