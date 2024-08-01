@@ -17,7 +17,7 @@ class minha_aplicacao(Ui_Form, QWidget):
         self.conecao()  # Conecta ao banco de dados
         self.testar_valor()  # Verifica e inicializa o valor total, se necessário
         self.total.setReadOnly(True)  # Define o campo total como somente leitura
-        self.carregar_a_porra_toda()  # Carrega todos os dados na interface
+        self.carregar_transacoes()  # Carrega todos os dados na interface
         self.botao_lucro.clicked.connect(lambda: self.calcular_lucro())  # Conecta o botão de lucro à função calcular_lucro
         self.botao_gasto.clicked.connect(lambda: self.calcular_gasto())  # Conecta o botão de gasto à função calcular_gasto
         self.remover_botao.clicked.connect(lambda: self.deletar())  # Conecta o botão de remover à função deletar
@@ -67,7 +67,6 @@ class minha_aplicacao(Ui_Form, QWidget):
         if self.valor_input.text() and self.descricao_input.text():
             try:
                 valor_recebido = float(self.valor_input.text())
-                valor_total = float(self.total.text())
                 conta = valor_recebido + self.consultar_valor()
                 self.total.setText(str(conta))
                 self.adicionar_a_coluna(self.descricao_input.text(), valor_recebido)
@@ -131,7 +130,7 @@ class minha_aplicacao(Ui_Form, QWidget):
         self.valor_input.setText("")
         self.descricao_input.setText("")
 
-    def carregar_a_porra_toda(self):
+    def carregar_transacoes(self):
         # Carrega todas as transações e o valor total da base de dados para a interface
         self.cursor_sql.execute(f' SELECT descricao, Valor FROM {self.tabela_de_valores}')
         total = self.cursor_sql.fetchall()
@@ -165,3 +164,5 @@ janela = minha_aplicacao()
 janela.setFixedSize(900, 482)
 janela.show()
 app.exec()
+janela.cursor_sql.close()
+janela.conection.close()
