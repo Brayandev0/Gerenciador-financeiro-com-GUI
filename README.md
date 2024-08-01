@@ -3,9 +3,9 @@ Gerenciador de Finanças
 Este projeto é um Gerenciador de Finanças desenvolvido com PySide6 e SQLite. Ele permite aos usuários registrar transações financeiras, calcular lucros e gastos, e visualizar um todas as transações.
 
 ## Tecnologias usadas
--**Pyside6**-
--**Python2.12.3**-
--**SQLite**-
+-**Pyside6** 
+-**Python2.12.3**
+-**SQLite**
 
 ![Captura de tela_2024-06-23_17-26-27](https://github.com/Brayandev0/Gerenciador-financeiro-com-GUI/assets/84828739/0dd1d04f-3713-4222-8066-d00c622c489b)
 ![Captura de tela_2024-06-23_17-32-33](https://github.com/Brayandev0/Gerenciador-financeiro-com-GUI/assets/84828739/3966ada7-3893-4b4a-86e2-5ee177fea92f)
